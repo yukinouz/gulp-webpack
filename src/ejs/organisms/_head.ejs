@@ -1,0 +1,40 @@
+<%- include('../data/_meta') %> 
+<%- include('../data/_twitter') %> 
+<%- include('../data/_fb') %> 
+<%- include('../data/_favicon') %> 
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no" />
+  <title><%= metaInfo.title %></title>
+  <!-- meta tags -->
+  <meta name="description" content="<%= description %>" />
+  <meta name="keywords" content="<%= keyword %>" />
+  <!-- ogp -->
+  <meta property="og:title" content="<%= ogp_title %>" />
+  <meta property="og:type" content="<%= type %>" />
+  <meta property="og:url" content="<%= ogp_url %>" />
+  <meta property="og:image" content="<%= ogp_image %>" />
+  <meta property="og:site_name" content="<%= ogp_sitename %>" />
+  <meta property="og:description" content="<%= ogp_description %>" />
+  <!-- twitter -->
+  <meta name="twitter:card" content="<%= tw_image %>" />
+  <meta name="twitter:site" content="<%= tw_site %>" />
+  <meta name="twitter:domain" content="<%= tw_domein %>" />
+  <meta name="twitter:title" content="<%= ogp_title %>" />
+  <meta name="twitter:description" content="<%= ogp_description %>" />
+  <!-- facebook -->
+  <meta property="fb:admins" content="<%= fb_admins %>" />
+  <meta property="fb:app_id" content="<%= fb_appId %>">
+  <meta name="twitter:image" content="<%= tw_imageUrl %>" />
+  <meta name="twitter:creator" content="<%= tw_creator %>" />
+  <!-- favicon -->
+  <link rel="”icon”" href="<%= favicon %>" />
+  <link rel="apple-touch-icon" sizes="48x48" href="<%= apple_touch_icon %>">
+   <!-- jQuery -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- css -->
+  <link rel="stylesheet" href="<%= metaInfo.path %>dist/style.css">
+</head>

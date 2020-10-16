@@ -12,7 +12,7 @@ const useCompileEjs = done => {
   .pipe(plumber(({ errorHandler: notify.onError("Error: <%= error.message %>") })))
   .pipe(ejs())
   .pipe(rename({ extname: ".html" }))
-  .pipe(replace(/[\s\S]*?(<!DOCTYPE)/, "$1"))
+  .pipe(replace(/^[ \t]*\n/gim, ""))
   .pipe(dest("./"));
   done();
 }
