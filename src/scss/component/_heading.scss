@@ -1,0 +1,11 @@
+.c-heading {
+  font-weight: 700;
+  padding: 0.4em 0.8em;
+}
+
+// 左のバーに破線の下線をプラスした見出し
+.c-heading--type001 {
+  @extend .c-heading;
+  border-bottom: 0.1em dotted #eee;
+  text-align: left;
+}

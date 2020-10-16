@@ -1,0 +1,16 @@
+$initType: "flex";
+@mixin _flex($type: $initType) {
+  //共通スタイル
+  display: flex;
+  @if ($type == "flex") {
+    //スタイル
+  } @else if($type == "between") {
+    justify-content: space-between;
+  } @else if($type == "around") {
+    justify-content: space-around;
+  } @else if($type == "center") {
+    justify-content: center;
+  } @else if ($type == "wrap") {
+    flex-wrap: wrap;
+  }
+}

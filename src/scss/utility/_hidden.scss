@@ -1,0 +1,12 @@
+// PC, SPでの表示非表示切り替え
+._pc {
+  @include mq-max(w768) {
+    display: none;
+  }
+}
+
+._sp {
+  @include mq-min(w768) {
+    display: none;
+  }
+}

@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- title -->
+  <title>webpack sample</title>
+   <!-- CSS -->
+  <link rel="stylesheet" href="./dist/css/style.css">
+  <link rel="stylesheet" href="./dist/css/app.css">
+</head>
+<body>
+  <div class="contents">
+
+    <!-- loading画面 -->
+    <div id="js-loader" class="loader"></div>
+  
+    <!-- header -->
+    <header id="header" class="header">
+      <div class="header-inner">
+        <h1 class="logo">JS Snippets</h1>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li><a href="#menu1">Menu1</a></li>
+            <li><a href="#menu2">Menu2</a></li>
+            <li><a href="#menu3">Menu3</a></li>
+          </ul><!-- /.nav-list -->
+        </nav><!-- /.nav -->
+        <div id="drawer" class="c-drawer">
+          <input id="drawer-checkbox" class="drawer-checkbox" type="checkbox">
+          <label id="drawer-icon" class="c-drawer__icon" for="drawer-checkbox"><span></span></label>
+          <label id="drawer-close" class="c-drawer__close" for="drawer-checkbox"></label>
+          <div id="drawer-content" class="c-drawer__content">
+            <div class="c-drawer__logo"><a href="">LOGO</a></div>
+            <nav class="c-drawer__nav">
+              <ul class="c-drawer__list">
+                <li class="c-drawer__list-ttl">DRAWER MENUS</li>
+                <li class="c-drawer__list-item"><a href="">HOME</a></li>
+                <li class="c-drawer__list-item"><a href="">MENU1</a></li>
+                <li class="c-drawer__list-item"><a href="">MENU2</a></li>
+                <li class="c-drawer__list-item"><a href="">MENU3</a></li>
+                <li class="c-drawer__list-item"><a href="">MENU4</a></li>
+              </ul>
+            </nav>
+          </div><!-- /.drawer-content -->
+        </div><!-- /.drawer -->
+      </div><!-- /.header-inner -->
+    </header><!-- /#header.header -->
+
+    <div class="mySwiper swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="https://haniwaman.com/wp-content/uploads/2018/05/swiper01.png" alt="Swiper01"></div>
+        <div class="swiper-slide"><img src="https://haniwaman.com/wp-content/uploads/2018/05/swiper02.png" alt="Swiper02"></div>
+        <div class="swiper-slide"><img src="https://haniwaman.com/wp-content/uploads/2018/05/swiper03.png" alt="Swiper03"></div>
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div><!-- mySwiper -->
+  
+    <!-- menus -->
+    <section class="menus">
+      <div id="menu1" class="menu menu1">
+        <h2 class="menus-ttl">menu1</h2>
+      </div><!-- /#menu1.menus -->
+      <div id="menu2" class="menu menu2">
+        <h2 class="menus-ttl">menu2</h2>
+      </div><!-- /#menu1.menus -->
+      <div id="menu3" class="menu menu3">
+        <h2 class="menus-ttl">menu3</h2>
+      </div><!-- /#menu1.menus -->
+    </section><!-- /.menus -->
+  
+    <!-- accordion -->
+    <section class="accordion">
+      <div class="accordion__container">
+        <h4 class="accordion__title js-accordion-title">Accordion Title 1</h4>
+        <div class="accordion__content">Accordion Content 1</div>
+        <h4 class="accordion__title js-accordion-title">Accordion Title 2</h4>
+        <div class="accordion__content">Accordion Content 2</div>
+        <h4 class="accordion__title js-accordion-title">Accordion Title 3</h4>
+        <div class="accordion__content">Accordion Content 3</div>
+      </div><!-- accordion__container -->
+    </section><!-- /.accordion -->
+
+    <!-- accordion single -->
+    <div class="accordion-single js-acc-single">
+      <div class="accordion-single-item js-acc-item">
+         <h2 class="accordion-single-title js-acc-single-trigger">Question 1</h2>
+         <div class="accordion-single-content">
+           <p>This is an Answer 2</p>
+         </div>
+       </div>
+      <div class="accordion-single-item js-acc-item">
+         <h2 class="accordion-single-title js-acc-single-trigger">Question 2</h2>
+         <div class="accordion-single-content">
+           <p>This is an Answer 2</p>
+         </div>
+       </div>
+      <div class="accordion-single-item js-acc-item">
+         <h2 class="accordion-single-title js-acc-single-trigger">Question 3</h2>
+         <div class="accordion-single-content">
+           <p>This is an Answer 3</p>
+         </div>
+       </div>
+   </div><!-- accordion-single -->
+  
+    <div class="boxes">
+      <div class="fade-in fade-in-up box"></div>
+      <div class="fade-in fade-in-up box"></div>
+      <div class="fade-in fade-in-left box"></div>
+      <div class="fade-in fade-in-left box"></div>
+      <div class="fade-in fade-in-right box"></div>
+      <div class="fade-in fade-in-right box"></div>
+      <div class="fade-in fade-in-down box"></div>
+      <div class="fade-in fade-in-down box"></div>
+    </div><!-- /.boxes -->
+  
+    <div class="container">
+      <button class="modal-btn modal-open" type="button" id="modalOpen">Open</button>
+    </div>
+  
+    <div id="modal" class="modal">
+      <div class="modal-overlay js-modal-close">
+        <div class="modal-container">
+          <div class="modal-content">
+            <h2 class="modal-content-ttl">モーダルのタイトルです</h2>
+            <p class="modal-content-txt">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam dignissimos delectus quia ducimus quae architecto repellat expedita rem ipsam quisquam esse, cum atque, veritatis quos reprehenderit unde explicabo neque facere?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam dignissimos delectus quia ducimus quae architecto repellat expedita rem ipsam quisquam esse, cum atque, veritatis quos reprehenderit unde explicabo neque facere?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam dignissimos delectus quia ducimus quae architecto repellat expedita rem ipsam quisquam esse, cum atque, veritatis quos reprehenderit unde explicabo neque facere?</p>
+          </div><!-- /.modal-content -->
+          <button class="modal-btn modal-close js-modal-close">Close</button>
+        </div><!-- /.modal-container -->
+      </div><!-- /.modal-overlay -->
+    </div><!-- /.modal -->
+  
+    <div class="gallery">
+      <ul class="gallery-list">
+        <li class="gallery-main gallery-main01 js-mainGallery is_active"></li>
+        <li class="gallery-main gallery-main02 js-mainGallery"></li>
+        <li class="gallery-main gallery-main03 js-mainGallery"></li>
+      </ul><!-- gallery-list -->
+        <div class="thumbnail">
+          <ul class="thumbnail-list">
+            <li class="thumbnail01 js-thumbnail is_selected"></li>
+            <li class="thumbnail02 js-thumbnail"></li>
+            <li class="thumbnail03 js-thumbnail"></li>
+          </ul>
+        </div>
+    </div><!-- /.gallery -->
+  
+    </div><!-- /.contents -->
+  
+    <div class="for-scroll"></div><!-- /.for-scroll -->
+  
+    <div id="js-scroll-top" class="scroll-top">TOP</div>
+
+  <script src="./dist/js/bundle.js"></script>
+</body>
+</html>

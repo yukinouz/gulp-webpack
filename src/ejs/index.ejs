@@ -1,0 +1,20 @@
+<% 
+const metaInfo = {
+  title: 'トップページのタイトル',
+  description: 'トップページのディスクリプション',
+  path: './'
+}
+
+%>
+
+<%- include(metaInfo.path + 'common/_header', {metaInfo: metaInfo} ) %>
+
+<!-- content -->
+<div class="content">
+
+<h1>Hello ejs</h1>
+<p>トップページのテキスト</p>
+
+</div><!-- /content -->
+
+<%- include(metaInfo.path + 'common/_footer', {metaInfo: metaInfo} ) %>

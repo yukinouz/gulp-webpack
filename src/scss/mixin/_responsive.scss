@@ -1,0 +1,28 @@
+// min-width
+$breakpoint-min: (
+  "w375": "only screen and (min-width: 375px)",
+  "w768": "only screen and (min-width: 768px)",
+  "w1024": "only screen and (min-width: 1024px)",
+  "w1440": "only screen and (min-width: 1440px)",
+) !default;
+
+// max-width
+$breakpoint-max: (
+  "w375": "only screen and (max-width: 374px)",
+  "w768": "only screen and (max-width: 767px)",
+  "w1024": "only screen and (max-width: 1023px)",
+  "w1440": "only screen and (max-width: 1439px)",
+) !default;
+
+// @mixinの定義
+@mixin mq-min($breakpoint: w768) {
+  @media #{map-get($breakpoint-min, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mq-max($breakpoint: w768) {
+  @media #{map-get($breakpoint-max, $breakpoint)} {
+    @content;
+  }
+}
