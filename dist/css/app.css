@@ -3,20 +3,16 @@ body {
   -webkit-text-size-adjust: 100%;
   color: #333;
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-  font-size: 1.6em;
+  font-size: 14px;
   line-height: 1.6875;
   padding-top: 80px;
   width: 100%;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
   body {
-    font-size: 1.4em;
+    font-size: 16px;
   }
-}
-
-html {
-  font-size: 62.5%;
 }
 
 html,
@@ -159,7 +155,7 @@ button {
 }
 
 .l-sec {
-  padding: 4rem 0;
+  padding: 40px 0;
   width: 100%;
 }
 
