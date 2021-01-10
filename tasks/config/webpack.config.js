@@ -1,3 +1,5 @@
+const webpack = require('webpack');
+
 module.exports = {
   mode: "production",
   entry: `./src/js/app.js`,
@@ -36,6 +38,15 @@ module.exports = {
       },
     ]
   },
+  plugins: [
+    // ProvidePlugin を利用する
+    new webpack.ProvidePlugin({
+      // 外部モジュールであるjqueryを、全てのファイル上で変数$として利用できるようになる
+      $: 'jquery',
+      "jQuery": "jquery",
+      "window.jQuery": "jquery"
+    }),
+  ],
   output: {
     filename: "bundle.js"
   },
