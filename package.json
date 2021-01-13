@@ -44,6 +44,7 @@
   "dependencies": {
     "jquery": "^3.5.1",
     "picturefill": "^3.0.3",
-    "swiper": "^6.3.3"
+    "swiper": "^6.3.3",
+    "vanilla-lazyload": "^17.3.0"
   }
 }

@@ -1,4 +1,5 @@
 import {loading} from "./modules/loading";
+import {lazyload} from "./modules/lazyload";
 import {applyPicturefill} from "./modules/picturefill";
 import {fadeIn} from "./modules/fadein";
 import {accordion} from "./modules/accordion";
@@ -10,6 +11,7 @@ import {adjustViewport} from "./modules/adjustViewport";
 import mySwiper from "./modules/mySwiper";
 
 loading();
+lazyload();
 applyPicturefill();
 fadeIn();
 accordion();
