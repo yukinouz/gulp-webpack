@@ -1,4 +1,5 @@
 import {loading} from "./modules/loading";
+import {applyPicturefill} from "./modules/picturefill";
 import {fadeIn} from "./modules/fadein";
 import {accordion} from "./modules/accordion";
 import {smoothScroll} from "./modules/smoothscroll";
@@ -9,6 +10,7 @@ import {adjustViewport} from "./modules/adjustViewport";
 import mySwiper from "./modules/mySwiper";
 
 loading();
+applyPicturefill();
 fadeIn();
 accordion();
 smoothScroll();

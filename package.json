@@ -43,6 +43,7 @@
   },
   "dependencies": {
     "jquery": "^3.5.1",
+    "picturefill": "^3.0.3",
     "swiper": "^6.3.3"
   }
 }
