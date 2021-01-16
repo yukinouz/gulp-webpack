@@ -1,0 +1,57 @@
+.p-box {
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__item {
+    background-color: orange;
+    height: 180px;
+    margin: 20px 0;
+    width: calc(50% - 20px / 2);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  transition-duration: 500ms;
+  transition-property: opacity, -webkit-transform;
+  transition-property: opacity, transform;
+  transition-property: opacity, transform, -webkit-transform;
+}
+
+.fade-in-up {
+  -webkit-transform: translate(0, 50px);
+  transform: translate(0, 50px);
+}
+
+.fade-in-down {
+  -webkit-transform: translate(0, -50px);
+  transform: translate(0, -50px);
+}
+
+.fade-in-left {
+  -webkit-transform: translate(-50px, 0);
+  transform: translate(-50px, 0);
+}
+
+.fade-in-right {
+  -webkit-transform: translate(50px, 0);
+  transform: translate(50px, 0);
+}
+
+.scroll-in {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.scroll-top:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.scroll-top {
+  opacity: 0;
+  transition: opacity 350ms ease;
+}

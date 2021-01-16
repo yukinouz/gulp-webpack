@@ -1,0 +1,45 @@
+.c-accordion-single {
+}
+
+.c-accordion-single__title {
+  border-top: 1px solid #999;
+  cursor: pointer;
+  font-size: 20px;
+  margin: 0;
+  padding: 20px;
+  position: relative;
+}
+
+.c-accordion-single__title::after {
+  border-right: solid 2px #999;
+  border-top: solid 2px #999;
+  content: "";
+  display: block;
+  height: 8px;
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  -webkit-transform: translateY(-50%) rotate(135deg);
+  transform: translateY(-50%) rotate(135deg);
+  transition: all 0.2s ease-in-out;
+  width: 8px;
+}
+
+.c-accordion-single__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.c-accordion-single__text {
+  padding: 20px;
+}
+
+.c-accordion-single__item.is-open .c-accordion-single__content {
+  max-height: 150px;
+}
+
+.c-accordion-single__item.is-open .c-accordion-single__title::after {
+  -webkit-transform: translateY(-50%) rotate(315deg);
+  transform: translateY(-50%) rotate(315deg);
+}

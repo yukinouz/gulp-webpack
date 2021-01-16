@@ -1,5 +1,8 @@
 export function smoothScroll() {
 
+  const header = document.getElementById('header');
+  const headerHight = header.clientHeight;
+
   document.addEventListener("DOMContentLoaded",() => {
 
   const smoothScrollTrigger = document.querySelectorAll('a[href^="#"]');
@@ -14,7 +17,7 @@ export function smoothScroll() {
 
       const rect = targetElement.getBoundingClientRect().top;
       const offset = window.pageYOffset;
-      const gap = 60; // 固定ヘッダー分の高さを引く
+      const gap = headerHight; // 固定ヘッダー分の高さを引く
       const target = rect + offset - gap; // offsetTop()
 
       window.scrollTo({

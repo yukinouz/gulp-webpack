@@ -1,6 +1,9 @@
 .l-inner {
   margin: 0 auto;
   max-width: 1080px;
-  padding: 0 40px;
+  padding: 0 25px;
   width: 100%;
+  @include mq-min(w768) {
+    padding: 0 40px;
+  }
 }

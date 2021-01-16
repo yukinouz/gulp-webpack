@@ -1,0 +1,18 @@
+.c-gnav {
+  display: none;
+  @include mq-min(w768) {
+    align-items: center;
+    display: block;
+    display: flex;
+    height: 60px;
+  }
+  &__lists {
+    display: flex;
+    list-style: none;
+  }
+  &__list {
+    &:not(:first-child) {
+      margin-left: 20px;
+    }
+  }
+}

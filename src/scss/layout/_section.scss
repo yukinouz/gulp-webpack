@@ -1,4 +1,7 @@
 .l-sec {
   padding: 40px 0;
   width: 100%;
+  @include mq-min(w768) {
+    padding: 80px 0;
+  }
 }

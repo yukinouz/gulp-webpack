@@ -1,0 +1,21 @@
+.p-swiper {
+  &__item {
+    align-items: center;
+    color: #fff;
+    display: flex;
+    font-size: 32px;
+    font-weight: bold;
+    height: 400px;
+    justify-content: center;
+    width: 100%;
+    &--item01 {
+      background: gray;
+    }
+    &--item02 {
+      background: orange;
+    }
+    &--item03 {
+      background: green;
+    }
+  }
+}

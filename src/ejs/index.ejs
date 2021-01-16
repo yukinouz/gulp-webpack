@@ -8,9 +8,152 @@ const metaInfo = {
 
 <%- include(metaInfo.path + 'common/_header', {metaInfo: metaInfo} ); %>
 
-<main>
-  <h1>Hello ejs</h1>
-  <p>トップページのテキスト</p>
-</main>
+  <!-- loading画面 -->
+  <div id="js-loader" class="loader"></div>
+
+  <main class="u-body-spacing">
+    <!-- header -->
+    <header id="header" class="l-header l-header--fixed">
+      <div class="l-inner">
+        <div class="l-header__items">
+          <h1 class="l-header__logo">JS Snippets</h1>
+          <nav class="c-gnav">
+            <ul class="c-gnav__lists">
+              <li class="c-gnav__list"><a href="#">Top</a></li>
+              <li class="c-gnav__list"><a href="#a-menu1">Menu1</a></li>
+              <li class="c-gnav__list"><a href="#a-menu2">Menu2</a></li>
+              <li class="c-gnav__list"><a href="#a-menu3">Menu3</a></li>
+            </ul>
+          </nav><!-- /.c-gnav -->
+        </div>
+      </div>
+
+      <button type="button" id="js-hamburger" class="c-hamburger c-hamburger__button" aria-controls="js-glabal-menu" aria-expanded="false" area-label="メニューを開閉する">
+        <span class="c-hamburger__line">
+        </span>
+      </button>
+      <div class="c-hamburger__menu" id="js-global-menu" area-hidden="true">
+        <div class="l-inner">
+          <div class="c-hamburger__header">
+            <div class="c-hamburger__item">
+              <h1 class="l-header__logo js-drawer-menu">
+                <a href="#" class="l-header__link">JS Snippets</a>
+              </h1>
+            </div><!-- /.l-header-item -->
+          </div><!-- /.c-hamburger__header -->
+          <nav class="c-hamburger__nav">
+            <ul class="c-hamburger__lists">
+              <li class="c-hamburger__list"><a href="#a-menu1" class="js-drawer-menu c-hamburger__link"><span class="c-hamburger__link-en">Menu1</span>メニュー1</a></li>
+              <li class="c-hamburger__list"><a href="#a-menu2" class="js-drawer-menu c-hamburger__link"><span class="c-hamburger__link-en">Menu2</span>メニュー2</a></li>
+              <li class="c-hamburger__list"><a href="#a-menu3" class="js-drawer-menu c-hamburger__link"><span class="c-hamburger__link-en">Menu3</span>メニュー3</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div><!-- /.sp-header-menu -->
+
+    </header><!-- /#header.header -->
+  
+    <div class="mySwiper swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><div class="p-swiper__item p-swiper__item--item01">Swiper Item01</div></div>
+        <div class="swiper-slide p-swiper__item--item02"><div class="p-swiper__item">Swiper Item02</div></div>
+        <div class="swiper-slide p-swiper__item--item03"><div class="p-swiper__item">Swiper Item03</div></div>
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div><!-- mySwiper -->
+  
+    <!-- accordion -->
+    <section id="a-menu1" class="c-accordion l-sec">
+      <div class="l-inner">
+        <div class="c-accordion__container">
+          <h4 class="c-accordion__title js-accordion-title">Accordion Title 1</h4>
+          <div class="c-accordion__content">Accordion Content 1</div>
+          <h4 class="c-accordion__title js-accordion-title">Accordion Title 2</h4>
+          <div class="c-accordion__content">Accordion Content 2</div>
+          <h4 class="c-accordion__title js-accordion-title">Accordion Title 3</h4>
+          <div class="c-accordion__content">Accordion Content 3</div>
+        </div><!-- accordion__container -->
+      </div>
+    </section><!-- /.accordion -->
+  
+    <!-- accordion single -->
+    <div class="c-accordion-single js-acc-single">
+      <div class="l-sec u-bg--gray">
+        <div class="l-inner">
+          <div class="c-accordion-single__item js-acc-item">
+            <h2 class="c-accordion-single__title js-acc-single-trigger">Question 1</h2>
+            <div class="c-accordion-single__content">
+              <p class="c-accordion-single__text">This is an Answer 1</p>
+            </div>
+          </div>
+          <div class="c-accordion-single__item js-acc-item">
+            <h2 class="c-accordion-single__title js-acc-single-trigger">Question 2</h2>
+            <div class="c-accordion-single__content">
+              <p class="c-accordion-single__text">This is an Answer 2</p>
+            </div>
+          </div>
+          <div class="c-accordion-single__item js-acc-item">
+            <h2 class="c-accordion-single__title js-acc-single-trigger">Question 3</h2>
+            <div class="c-accordion-single__content">
+              <p class="c-accordion-single__text">This is an Answer 3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- c-accordion-single -->
+  
+    <section id="a-menu2" class="p-box l-sec">
+      <div class="l-inner">
+        <div class="p-box__items">
+          <div class="fade-in fade-in-up p-box__item"></div>
+          <div class="fade-in fade-in-up p-box__item"></div>
+         <!--  <div class="fade-in fade-in-left p-box__item"></div>
+          <div class="fade-in fade-in-left p-box__item"></div>
+          <div class="fade-in fade-in-right p-box__item"></div>
+          <div class="fade-in fade-in-right p-box__item"></div> -->
+          <div class="fade-in fade-in-down p-box__item"></div>
+          <div class="fade-in fade-in-down p-box__item"></div>
+        </div>
+      </div>
+    </section><!-- /.p-box -->
+    
+    <section class="c-modal l-sec">
+      <div class="l-inner">
+        <button class="c-modal__btn c-modal__open" type="button" id="modalOpen">Modal Open</button>
+
+        <div id="modal" class="c-modal__hide">
+          <div class="c-modal__overlay js-modal-close">
+            <div class="c-modal__container">
+              <div class="c-modal__content">
+                <h2 class="c-modal__content-ttl">モーダルのタイトルです</h2>
+                <p class="c-modal__content-txt">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam dignissimos delectus quia ducimus quae architecto repellat expedita rem ipsam quisquam esse, cum atque, veritatis quos reprehenderit unde explicabo neque facere?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam dignissimos delectus quia ducimus quae architecto repellat expedita rem ipsam quisquam esse, cum atque, veritatis quos reprehenderit unde explicabo neque facere?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam dignissimos delectus quia ducimus quae architecto repellat expedita rem ipsam quisquam esse, cum atque, veritatis quos reprehenderit unde explicabo neque facere?</p>
+              </div>
+              <button class="c-modal__btn c-modal__close js-modal-close">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /.c-modal -->
+  
+    <section id="a-menu3" class="c-gallery l-sec">
+      <div class="l-inner">
+        <ul class="c-gallery__lists">
+          <li class="c-gallery__main c-gallery__main--01 js-mainGallery is_active"></li>
+          <li class="c-gallery__main c-gallery__main--02 js-mainGallery"></li>
+          <li class="c-gallery__main c-gallery__main--03 js-mainGallery"></li>
+        </ul><!-- c-gallery-list -->
+        <div class="c-gallery__thumbnail">
+          <ul class="c-gallery__thumbnail-lists">
+            <li class="c-gallery__thumbnail-list c-gallery__thumbnail-list--01 js-thumbnail is_selected"></li>
+            <li class="c-gallery__thumbnail-list c-gallery__thumbnail-list--02 js-thumbnail"></li>
+            <li class="c-gallery__thumbnail-list c-gallery__thumbnail-list--03 js-thumbnail"></li>
+          </ul>
+        </div>
+      </div>
+    </section><!-- /.gallery -->
+  </main>
+
+  <div id="js-scroll-top" class="c-scroll-top c-scroll-top--animation">TOP</div>
 
 <%- include(metaInfo.path + 'common/_footer', {metaInfo: metaInfo} ) %>

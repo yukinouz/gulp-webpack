@@ -1,0 +1,70 @@
+.c-accordion {
+}
+
+.c-accordion__title {
+  background-color: #191919;
+  border: 1px solid transparent;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 15px 20px;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c-accordion__title::before,
+.c-accordion__title::after {
+  background-color: #fff;
+  content: "";
+  display: block;
+  height: 2px;
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  width: 15px;
+}
+
+.c-accordion__title::after {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  transition-duration: 0.3s;
+}
+
+.c-accordion__title:hover,
+.c-accordion__title:active,
+.c-accordion__title.is-active {
+  background-color: #00aaa7;
+}
+
+.c-accordion__title.is-active::before {
+  opacity: 0;
+}
+
+.c-accordion__title.is-active::after {
+  -webkit-transform: rotate(0);
+  transform: rotate(0);
+}
+
+.c-accordion__content {
+  border: 1px solid #00aaa7;
+  height: 0;
+  line-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  transition-duration: 0.3s;
+}
+
+.c-accordion__content.is-open {
+  border-left: 1px solid #00aaa7;
+  border-right: 1px solid #00aaa7;
+
+  /* numberに書き換える */
+  height: auto;
+  line-height: normal;
+  opacity: 1;
+  padding: 20px;
+}
