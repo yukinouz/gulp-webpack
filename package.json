@@ -1,6 +1,8 @@
 {
   "scripts": {
-    "dist": "gulp build --production"
+    "dev": "npx gulp build",
+    "dist": "npx gulp build --production",
+    "watch": "npx gulp"
   },
   "author": "Yuki Nose",
   "browserslist": [
