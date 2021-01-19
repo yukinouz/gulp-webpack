@@ -1,4 +1,4 @@
-# gulp-webpack
+# yukinouz-gulp-webpack
 
 Require Node.js  
 https://nodejs.org/ja/
@@ -40,3 +40,7 @@ stylelint requires stylelint-plus (VS code extension)
 If you encounter `stylelint: Undefined rule unicode-bom`, manually install [stylelint-plus-0.52.3.vsix.zip](https://github.com/hex-ci/vscode-stylelint-plus/files/3963538/stylelint-plus-0.52.3.vsix.zip)
 
 See [this Issue](https://github.com/hex-ci/vscode-stylelint-plus/pull/5) for more info
+
+## Memo
+cacheBusting (gulp cache)は連続で使用するとハッシュ値が連結して増えてしまうので、gulp ejs後に使用してください。  
+ejsを使用しないケースでは、ハッシュ値を手動で削除するか、cacheBustingは使わない方がいいかもしれません。
