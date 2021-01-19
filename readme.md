@@ -10,11 +10,13 @@ npm install
 
 ### Compiles and hot-reloads for development
 ```bash
+## Run buildServer and watchFiles
 npx gulp
 ```
 
 ### Compile Sass for production(group media queries)
 ```bash
+## Run compileSass width group media queries
 npx gulp sass --production
 ```
 
