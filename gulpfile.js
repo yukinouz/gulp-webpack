@@ -1,23 +1,14 @@
-const { parallel, series, watch, src, dest } = require("gulp");
+const { parallel, series, watch } = require("gulp");
 
 const { bundleJs } = require("./tasks/bundle-js");
 const { useCompileSass } = require("./tasks/compile-sass");
 const { useCompileEjs } = require("./tasks/compile-ejs");
 const { buildServer } = require("./tasks/build-server");
 const { browserReload } = require("./tasks/browser-reload");
-
-const crypto = require('crypto'); 
-const hash = crypto.randomBytes(8).toString('hex');
-const replace = require("gulp-replace");
+const { cacheBusting } = require("./tasks/cache-busting");
 
 const path = "./src";
 
-const cache = done => {
-  src('./index.html')
-  .pipe(replace(/\.(js|css)\?ver/g, '.$1?ver='+hash))
-  .pipe(dest("./"));
-  done();
-}
 
 const watchRules = {
   scss: `${path}/scss/**/*.scss`,
@@ -40,7 +31,7 @@ const watchFiles = () => {
 
 exports.sass = compileSass;
 exports.ejs = compileEjs;
-exports.cache = cache;
+exports.cache = cacheBusting;
 exports.bundle = bundleJs;
-exports.build = (compileEjs, compileSass, bundleJs, cache);
+exports.build = (compileEjs, compileSass, bundleJs, cacheBusting);
 exports.default = parallel(buildServer, watchFiles);
