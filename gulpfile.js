@@ -42,5 +42,5 @@ exports.sass = compileSass;
 exports.ejs = compileEjs;
 exports.cache = cache;
 exports.bundle = bundleJs;
-exports.build = (compileEjs, compileSass, cache);
+exports.build = (compileEjs, compileSass, bundleJs, cache);
 exports.default = parallel(buildServer, watchFiles);
