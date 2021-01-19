@@ -14,7 +14,7 @@ const path = "./src";
 
 const cache = done => {
   src('./index.html')
-  .pipe(replace(/\.(js|css)\?rev/g, '.$1?rev='+hash))
+  .pipe(replace(/\.(js|css)\?ver/g, '.$1?ver='+hash))
   .pipe(dest("./"));
   done();
 }
