@@ -1,5 +1,8 @@
 # gulp-webpack
 
+Require Node.js  
+https://nodejs.org/ja/
+
 ## Project setup
 ```bash
 npm install
@@ -7,17 +10,17 @@ npm install
 
 ### Compiles and hot-reloads for development
 ```bash
-gulp
+npx gulp
 ```
 
 ### Compile Sass for production(group media queries)
 ```bash
-gulp sass --production
+npx gulp sass --production
 ```
 
 ## polyfill for picture tag
-Nothing to do.
-Polyfill automatically apply to picture tags(picturefill.js)
+Nothing to do.  
+Polyfill automatically apply to picture tags by picturefill.js
 ## How to apply lazyload
 ```html
 <img data-src="lazy.jpg" alt="A lazy image" class="lazy" />
@@ -27,5 +30,11 @@ Polyfill automatically apply to picture tags(picturefill.js)
 </picture>
 ```
 
-for more info, see vanila-lazyload
+for more info, see vanila-lazyload  
 https://github.com/verlok/vanilla-lazyload
+
+## stylelint
+stylelint requires stylelint-plus (VS code extension)  
+If you encounter `stylelint: Undefined rule unicode-bom`, manually install [stylelint-plus-0.52.3.vsix.zip](https://github.com/hex-ci/vscode-stylelint-plus/files/3963538/stylelint-plus-0.52.3.vsix.zip)
+
+See [this Issue](https://github.com/hex-ci/vscode-stylelint-plus/pull/5) for more info
