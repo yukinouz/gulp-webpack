@@ -9,7 +9,7 @@ import {tabSwitch} from "./modules/tabswitch";
 import {modal} from "./modules/modal";
 import {scrollTop} from "./modules/scrolltop";
 import {adjustViewport} from "./modules/adjustViewport";
-import mySwiper from "./modules/mySwiper";
+import {mySwiper} from "./modules/mySwiper";
 
 loading();
 lazyload();
@@ -22,4 +22,4 @@ tabSwitch();
 modal();
 scrollTop();
 adjustViewport();
-mySwier();
+mySwiper();
