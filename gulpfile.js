@@ -6,6 +6,7 @@ const { useCompileEjs } = require("./tasks/compile-ejs");
 const { buildServer } = require("./tasks/build-server");
 const { browserReload } = require("./tasks/browser-reload");
 const { cacheBusting } = require("./tasks/cache-busting");
+const { ModuleFilenameHelpers } = require("webpack");
 
 const path = "./src";
 
@@ -29,9 +30,11 @@ const watchFiles = () => {
   watch(watchRules.js, series(bundleJs, browserReload));
 };
 
-exports.sass = compileSass;
-exports.ejs = compileEjs;
-exports.cache = cacheBusting;
-exports.bundle = bundleJs;
-exports.build = (compileEjs, compileSass, bundleJs, cacheBusting);
-exports.default = parallel(buildServer, watchFiles);
+module.exports = {
+  sass: compileSass,
+  bundle: bundleJs,
+  ejs: compileEjs,
+  cache: cacheBusting,
+  build: parallel(compileEjs, compileSass, bundleJs, cacheBusting),
+  default: parallel(buildServer, watchFiles),
+}
