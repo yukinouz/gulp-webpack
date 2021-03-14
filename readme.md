@@ -1,6 +1,6 @@
 # yukinouz-gulp-webpack
 
-Require Node.js  
+Require Node.js
 https://nodejs.org/ja/
 
 ## Project setup
@@ -21,7 +21,7 @@ npx gulp sass --production
 ```
 
 ## polyfill for picture tag
-Nothing to do.  
+Nothing to do.
 Polyfill automatically apply to picture tags by picturefill.js
 ## How to apply lazyload
 ```html
@@ -32,15 +32,12 @@ Polyfill automatically apply to picture tags by picturefill.js
 </picture>
 ```
 
-for more info, see vanila-lazyload  
+for more info, see vanila-lazyload
 https://github.com/verlok/vanilla-lazyload
 
 ## stylelint
-stylelint requires stylelint-plus (VS code extension)  
-If you encounter `stylelint: Undefined rule unicode-bom`, manually install [stylelint-plus-0.52.3.vsix.zip](https://github.com/hex-ci/vscode-stylelint-plus/files/3963538/stylelint-plus-0.52.3.vsix.zip)
-
-See [this Issue](https://github.com/hex-ci/vscode-stylelint-plus/pull/5) for more info
+stylelint requires stylelint(https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
 
 ## Memo
-cacheBusting (gulp cache)は連続で使用するとハッシュ値が連結して増えてしまうので、gulp ejs後に使用してください。  
+cacheBusting (gulp cache)は連続で使用するとハッシュ値が連結して増えてしまうので、gulp ejs後に使用してください。
 ejsを使用しないケースでは、ハッシュ値を手動で削除するか、cacheBustingは使わない方がいいかもしれません。
